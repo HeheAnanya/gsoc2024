@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Aesthetic Blog</h1>
+        <div class="theme-toggle">
+            <label for="theme-select">Choose Theme:</label>
+            <select id="theme-select">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+    </header>
+    
+    <main>
+        <article>
+            <h2>First Blog Post</h2>
+            <p>Welcome to my aesthetic blog! This is a simple blog site designed to be visually appealing with a clean and modern look.</p>
+        </article>
+        
+        <article>
+            <h2>Second Blog Post</h2>
+            <p>Another post to show how the content looks with different themes. Enjoy switching between light and dark modes!</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Aesthetic Blog</p>
+    </footer>
+
+    <script>
+        const themeSelect = document.getElementById('theme-select');
+        const body = document.body;
+
+        // Check the user's preference and set the theme accordingly
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (prefersDarkScheme) {
+            body.classList.add('dark');
+            themeSelect.value = 'dark';  // Set the dropdown to dark
+        } else {
+            body.classList.add('light');
+            themeSelect.value = 'light'; // Set the dropdown to light
+        }
+
+        themeSelect.addEventListener('change', function() {
+            const theme = themeSelect.value;
+            body.className = theme;
+        });
+    </script>
+</body>
+</html>
+

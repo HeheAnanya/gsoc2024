@@ -1,0 +1,105 @@
+/* Global Styles */
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Default Theme (Light) */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header, footer {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.theme-toggle {
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+article {
+    margin-bottom: 40px;
+}
+
+article h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+article p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Dark Theme (via prefers-color-scheme) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #ddd;
+    }
+
+    header, footer {
+        background-color: #333;
+    }
+
+    article h2 {
+        color: #ddd;
+    }
+
+    article p {
+        color: #bbb;
+    }
+}
+
+/* Theme Toggle (Overrides) */
+body.light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light header, body.light footer {
+    background-color: #fff;
+}
+
+body.dark {
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
+body.dark header, body.dark footer {
+    background-color: #333;
+}
+
+body.dark article h2 {
+    color: #ddd;
+}
+
+body.dark article p {
+    color: #bbb;
+}
+
