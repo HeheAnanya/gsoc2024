@@ -208,6 +208,7 @@ body.dark main div.main-content {
 .footer {
     text-align: center;
     padding: 20px 5px 5px 5px;
+    margin-bottom: 5%;
     position: relative;
     border-bottom-left-radius: 15px 15px;
     border-bottom-right-radius: 15px 15px;
@@ -267,9 +268,5 @@ body.dark .footer::before {
     header.header {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-    }
-
-    footer.footer {
-        margin: 0 auto 5%;
     }
 }
