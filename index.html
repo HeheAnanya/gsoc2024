@@ -3,57 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetic Blog</title>
+    <title>GSoC'24 Journey: singul4ri7y</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>My Aesthetic Blog</h1>
-        <div class="theme-toggle">
-            <label for="theme-select">Choose Theme:</label>
-            <select id="theme-select">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-            </select>
-        </div>
-    </header>
-    
-    <main>
-        <article>
-            <h2>First Blog Post</h2>
-            <p>Welcome to my aesthetic blog! This is a simple blog site designed to be visually appealing with a clean and modern look.</p>
-        </article>
-        
-        <article>
-            <h2>Second Blog Post</h2>
-            <p>Another post to show how the content looks with different themes. Enjoy switching between light and dark modes!</p>
-        </article>
-    </main>
+    <content>
+        <header class="header">
+            <h1>My GSoC'24 Journey</h1>
+            <div class="misc">
+                <div class="links">
+                    <a href="https://linkedin.com/in/singul4ri7y" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/singul4ri7y" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="date">24th August, 2024</div>
+                <div class="switch">
+                    <input id="switch" class="switch__input" name="switch" type="checkbox">
+                    <label class="switch__label" for="switch"></label>
+                </div>
+            </div>
+        </header>
 
-    <footer>
-        <p>&copy; 2024 My Aesthetic Blog</p>
-    </footer>
+        <main>
+            <div class="main-content">
+                <p> Ahh, who would've thought! Feels like the summer just began yersterday.</p>
+
+                <h2>Prologue</h2>
+                <p>Hi, I'm Syed Naimul Hasan Asif (also known as SD Asif Hossein), an undergrad student passionate about Low-level 
+                Programming, Programming Language Research, Operating Systems, Deep Learning and HPC. This blog post covers my work during Google Summer of Code 2024.</p>
+                <p>Over the time period, I have contributed to <a href="https://github.com/pallene-lang/pallene">Pallene</a>, an Ahead-of-Time compiled sister Language to 
+                Lua leveraging its most performance critical code. Although Pallene is arguably more efficient than LuaJIT (mentioned in the paper attached below) and code written in Lua C API, it lacked proper 
+                debugging support. My goal in <a href="https://summerofcode.withgoogle.com/programs/2024/projects/L0tirNFw">this project</a> was to introduce proper stack-tracing support by tracking function calls in case of runtime error enhancing overall 
+                debugging experience in Pallene.</p>
+                <p>You can learn more about Pallene in <a href="https://www.inf.puc-rio.br/~hgualandi/papers/Gualandi-2020-SCP.pdf">this paper</a>, written by my Mentor <a href="https://www.inf.puc-rio.br/~hgualandi/">Hugo Musso Gualandi</a>.</p>
+
+                <h2>Get the Code</h2>
+                <p>Merged PRs in Pallene can be found <a href="https://github.com/pallene-lang/pallene/pulls?q=is%3Apr+is%3Aclosed+author%3Asingul4ri7y+created%3A%3E2024-05-27+merged%3A%3C2024-08-19">here</a>.<br>
+                Merged PRs in Pallene Tracer can be found <a href="https://github.com/pallene-lang/pallene-tracer/pulls?q=is%3Apr+is%3Aclosed+author%3Asingul4ri7y+created%3A%3E2024-05-27+merged%3A%3C2024-08-19">here</a>.</p>
+                
+                <h2>The Pallene Tracer</h2>
+        </main>
+
+        <footer class="footer">
+            <p>Made with ❤️  by @singul4ri7y</p>
+        </footer>
+    </content>
 
     <script>
-        const themeSelect = document.getElementById('theme-select');
-        const body = document.body;
+        const body = document.querySelector("body");
+        const theme_switcher = document.querySelector("#switch");
 
-        // Check the user's preference and set the theme accordingly
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        // Check preffered theme
+        const preferred_dark = window.matchMedia("(prefers-colro-scheme: dark)");
+        theme_switcher.checked = preferred_dark;
+        
+        console.log(preferred_dark);
 
-        if (prefersDarkScheme) {
-            body.classList.add('dark');
-            themeSelect.value = 'dark';  // Set the dropdown to dark
-        } else {
-            body.classList.add('light');
-            themeSelect.value = 'light'; // Set the dropdown to light
-        }
+        if(preferred_dark) 
+            body.className = "dark";
+        else body.classname = "light";
+            
+        theme_switcher.oninput = () => {
 
-        themeSelect.addEventListener('change', function() {
-            const theme = themeSelect.value;
-            body.className = theme;
-        });
+            if (theme_switcher.checked == true) 
+                body.className = "dark";
+            else body.className = "light";
+        };
     </script>
 </body>
 </html>
