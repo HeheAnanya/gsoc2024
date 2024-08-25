@@ -13,7 +13,7 @@ h2 {
     font-weight: 500;
 }
 
-p { line-height: 2.5vh; }
+p { line-height: 2.75vh; }
 
 body.light {
     background-color: #E6F0FF;
@@ -228,7 +228,7 @@ body.dark .footer {
     bottom: 0;
     left: 0;
     right: 0;
-    top: -61px;
+    top: -64px;
     width: 97%;
     margin: auto;
     height: 20px;
@@ -268,5 +268,9 @@ body.dark .footer::before {
     header.header {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+    }
+
+    .footer {
+        margin-bottom: 10%;
     }
 }

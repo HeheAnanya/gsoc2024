@@ -59,20 +59,12 @@
         const theme_switcher = document.querySelector("#switch");
 
         // Check preffered theme
-        const preferred_dark = window.matchMedia("(prefers-colro-scheme: dark)");
+        const preferred_dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         theme_switcher.checked = preferred_dark;
-        
-        console.log(preferred_dark);
+        body.className = preferred_dark ? "dark" : "light";
 
-        if(preferred_dark) 
-            body.className = "dark";
-        else body.classname = "light";
-            
         theme_switcher.oninput = () => {
-
-            if (theme_switcher.checked == true) 
-                body.className = "dark";
-            else body.className = "light";
+            body.className = theme_switcher.checked ? "dark" : "light";
         };
     </script>
 </body>
