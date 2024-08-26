@@ -361,13 +361,9 @@ body.light main div.main-content {
     background-color: #E6F0FF;
 }
 
-main div.main-content a {
+main div.main-content a, main div.main-content a:visited {
     text-decoration: none;
     color: #1E90FF;
-}
-
-main div.main-content a:visited {
-    color: #6A5ACD;
 }
 
 body.dark main div.main-content {
