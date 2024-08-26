@@ -14,6 +14,17 @@ h2 {
 }
 
 p { line-height: 2.75vh; }
+b { font-weight: 500; }
+
+code {
+    padding: 3px;
+    border-radius: 6px;
+}
+
+code.code-block {
+    display: block;
+    padding: 15px;
+}
 
 body.light {
     background-color: #E6F0FF;
@@ -22,6 +33,24 @@ body.light {
 
 body.dark {
     background-color: #1e1e1e;
+    color: #ddd;
+}
+
+body.light code {
+    background-color: #d0e6ff;
+    color: #2b3a42;
+}
+
+body.dark code {
+    background-color: #2d2d2d;
+    color: #bd93f9;
+}
+
+body.light code.code-block {
+    color: #36454F;
+}
+
+body.dark code.code-block {
     color: #ddd;
 }
 
