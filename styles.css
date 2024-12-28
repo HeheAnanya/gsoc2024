@@ -439,3 +439,13 @@ body.dark .footer::before {
         margin-bottom: 10%;
     }
 }
+
+/* --------------------------------------------------------ADDED A TRANSFORM EFFECT--------------------------------------------- */
+.effect:hover{
+    font-size: 1.2rem;
+    color: rgb(206, 14, 240);
+}
+#effect:hover{
+    color: red;
+    font-size: 1.2rem;
+}git 
