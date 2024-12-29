@@ -441,11 +441,19 @@ body.dark .footer::before {
 }
 
 /* --------------------------------------------------------ADDED A TRANSFORM EFFECT--------------------------------------------- */
-.effect:hover{
+body.light .effect:hover{
     font-size: 1.2rem;
-    color: rgb(206, 14, 240);
+    color: rgb(240, 14, 217);
 }
-#effect:hover{
-    color: red;
+body.light #effect:hover{
     font-size: 1.2rem;
-}git 
+    color: rgb(240, 14, 217);
+}
+body.dark .effect:hover{
+    font-size: 1.2rem;
+    color: rgb(244, 224, 50);
+}
+body.dark #effect:hover{
+    font-size: 1.2rem;
+    color: rgb(244, 224, 50);
+}
