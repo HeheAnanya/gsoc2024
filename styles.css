@@ -441,19 +441,33 @@ body.dark .footer::before {
 }
 
 /* --------------------------------------------------------ADDED A TRANSFORM EFFECT--------------------------------------------- */
+body.light .effect{
+    transition: text-decoration 0.2s ;
+}
 body.light .effect:hover{
-    font-size: 1.2rem;
-    color: rgb(240, 14, 217);
+    text-decoration: underline;
+    color:#D77B3D;
+}
+
+body.light #effect{
+    transition: text-decoration 0.2s ;
 }
 body.light #effect:hover{
-    font-size: 1.2rem;
-    color: rgb(240, 14, 217);
+    text-decoration: underline;
+    color:#D77B3D;
+}
+body.dark .effect{
+    transition: text-decoration 0.2s ;
 }
 body.dark .effect:hover{
-    font-size: 1.2rem;
-    color: rgb(244, 224, 50);
+    text-decoration: underline;
+    color: #f1e0c6;
+}
+
+body.dark #effect{
+    transition: text-decoration 0.2s ;
 }
 body.dark #effect:hover{
-    font-size: 1.2rem;
-    color: rgb(244, 224, 50);
+    text-decoration: underline;
+    color: #f1e0c6;
 }
